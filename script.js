@@ -44,7 +44,6 @@ const unitPrice = 0.21;
 
 //User kms Price
 let price = unitPrice * userKms;
-let formatPrice = price.toFixed(2);
 
 //Discount under 18 & over 65
 const discountYoungPeople = price * 0.2;
@@ -60,6 +59,7 @@ if (userAge < 18){
 
 // // console.log(price);
 
+let formatPrice = price.toFixed(2);
+
 //* 6.
 targetElement.innerHTML = `<h1>Il prezzo del tuo biglietto è pari a <b> ${formatPrice} &euro; </b></h1>`;
-
