@@ -47,7 +47,7 @@ const discountYoungPeople = userKmsPrice * 0.2;
 const discountOldPoeple = userKmsPrice * 0.4;
 
 // // console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
-//* 6.
+
 let finalPrice = userKmsPrice
 
 if (userAge < 18){
@@ -56,4 +56,7 @@ if (userAge < 18){
     finalPrice = userKmsPrice - discountOldPoeple;
 }
 
-console.log(finalPrice);
+// // console.log(finalPrice);
+
+//* 6.
+targetElement.innerHTML = `<h1>il prezzo che devi pagare è pari a ${finalPrice} €</h1>`;
