@@ -23,4 +23,12 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 //* 1.
 const targetElement = document.getElementById("target");
-console.log(targetElement);
+// // console.log(targetElement);
+
+//* 2.
+const userKms = parseInt(prompt("Quanti km vuoi percorrere?", 20).trim());
+console.log(userKms);
+
+//* 3.
+const userAge = parseInt(prompt("Quanti anni hai?", 33).trim());
+console.log(userAge);
