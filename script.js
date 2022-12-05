@@ -1,5 +1,5 @@
 /*
-TRACCIA
+*TRACCIA
 Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
 Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -20,3 +20,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
                         40% discount for users over 65
 6. Printing final Price.
 */
+
+//* 1.
+const targetElement = document.getElementById("target");
+console.log(targetElement);
