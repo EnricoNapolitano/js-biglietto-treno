@@ -34,29 +34,32 @@ const userAge = parseInt(prompt("Quanti anni hai?", 33).trim());
 // // console.log(userAge);
 
 //! 4. TO DO
-
-//* 5.
-//Price for km
-const unitPrice = 0.21;
-
-//User kms Price
-const userKmsPrice = unitPrice * userKms;
-
-//Discount under 18 & over 65
-const discountYoungPeople = userKmsPrice * 0.2;
-const discountOldPoeple = userKmsPrice * 0.4;
-
-// // console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
-
-let finalPrice = userKmsPrice
-
-if (userAge < 18){
-    finalPrice = userKmsPrice - discountYoungPeople;
-} else if (userAge > 64) {
-    finalPrice = userKmsPrice - discountOldPoeple;
+if (!userKms || !userAge) {
+    alert("Valore non valido. Per piacere, inserisci dei valori numerici")
+} else {
+    //* 5.
+    //Price for km
+    const unitPrice = 0.21;
+    
+    //User kms Price
+    const userKmsPrice = unitPrice * userKms;
+    
+    //Discount under 18 & over 65
+    const discountYoungPeople = userKmsPrice * 0.2;
+    const discountOldPoeple = userKmsPrice * 0.4;
+    
+    // // console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
+    
+    let finalPrice = userKmsPrice
+    
+    if (userAge < 18){
+        finalPrice = userKmsPrice - discountYoungPeople;
+    } else if (userAge > 64) {
+        finalPrice = userKmsPrice - discountOldPoeple;
+    }
+    
+    // // console.log(finalPrice);
+    
+    //* 6.
+    targetElement.innerHTML = `<h1>il prezzo che devi pagare è pari a ${finalPrice} €</h1>`;
 }
-
-// // console.log(finalPrice);
-
-//* 6.
-targetElement.innerHTML = `<h1>il prezzo che devi pagare è pari a ${finalPrice} €</h1>`;
