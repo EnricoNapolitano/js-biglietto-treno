@@ -33,7 +33,7 @@ const userKms = parseInt(prompt("Quanti km vuoi percorrere?", 20).trim());
 const userAge = parseInt(prompt("Quanti anni hai?", 33).trim());
 // // console.log(userAge);
 
-//! 4. TO DO
+//* 4
 if (!userKms || !userAge) {
     alert("Valore non valido. Per piacere, inserisci dei valori numerici")
 } else {
@@ -61,5 +61,5 @@ if (!userKms || !userAge) {
     // // console.log(finalPrice);
     
     //* 6.
-    targetElement.innerHTML = `<h1>il prezzo che devi pagare è pari a ${finalPrice} €</h1>`;
+    targetElement.innerHTML = `<h1>Il prezzo del tuo biglietto è pari a <b> ${finalPrice} &euro; </b></h1>`;
 }
