@@ -27,11 +27,23 @@ const targetElement = document.getElementById("target");
 
 //* 2.
 const userKms = parseInt(prompt("Quanti km vuoi percorrere?", 20).trim());
-console.log(userKms);
+// // console.log(userKms);
 
 //* 3.
 const userAge = parseInt(prompt("Quanti anni hai?", 33).trim());
-console.log(userAge);
+// // console.log(userAge);
 
 //! 4. TO DO
 
+//* 5.
+//Price for km
+const unitPrice = 0.21;
+
+//User kms Price
+const userKmsPrice = unitPrice * userKms;
+
+//Discount under 18 & over 65
+const discountYoungPeople = userKmsPrice * 0.2;
+const discountOldPoeple = userKmsPrice * 0.4;
+
+console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
