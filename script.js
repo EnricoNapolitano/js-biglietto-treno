@@ -32,3 +32,6 @@ console.log(userKms);
 //* 3.
 const userAge = parseInt(prompt("Quanti anni hai?", 33).trim());
 console.log(userAge);
+
+//! 4. TO DO
+
