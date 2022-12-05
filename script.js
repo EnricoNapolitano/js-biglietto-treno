@@ -42,20 +42,18 @@ if (!userKms || !userAge) {
     const unitPrice = 0.21;
     
     //User kms Price
-    const userKmsPrice = unitPrice * userKms;
+    let finalPrice = unitPrice * userKms;
     
     //Discount under 18 & over 65
-    const discountYoungPeople = userKmsPrice * 0.2;
-    const discountOldPoeple = userKmsPrice * 0.4;
+    const discountYoungPeople = finalPrice * 0.2;
+    const discountOldPoeple = finalPrice * 0.4;
     
-    // // console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
-    
-    let finalPrice = userKmsPrice
+    // // console.log(unitPrice, finalPrice, discountYoungPeople, discountOldPoeple);
     
     if (userAge < 18){
-        finalPrice = userKmsPrice - discountYoungPeople;
+        finalPrice += - discountYoungPeople;
     } else if (userAge > 64) {
-        finalPrice = userKmsPrice - discountOldPoeple;
+        finalPrice += - discountOldPoeple;
     }
     
     // // console.log(finalPrice);
