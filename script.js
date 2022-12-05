@@ -18,7 +18,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
     Must be considered: 0.21€ * km
                         20% discount for users under 18
                         40% discount for users over 65
-6. Printing final Price.
+6. printing final Price.
 */
 
 //* 1.
@@ -46,4 +46,14 @@ const userKmsPrice = unitPrice * userKms;
 const discountYoungPeople = userKmsPrice * 0.2;
 const discountOldPoeple = userKmsPrice * 0.4;
 
-console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
+// // console.log(unitPrice, userKmsPrice, discountYoungPeople, discountOldPoeple);
+//* 6.
+let finalPrice = userKmsPrice
+
+if (userAge < 18){
+    finalPrice = userKmsPrice - discountYoungPeople;
+} else if (userAge > 64) {
+    finalPrice = userKmsPrice - discountOldPoeple;
+}
+
+console.log(finalPrice);
